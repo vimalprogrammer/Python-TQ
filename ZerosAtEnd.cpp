@@ -34,3 +34,30 @@ int main()
 
     return 0;
 }
+
+//Linear time complexity solution
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    //cout<<"Hello World";
+    int n;cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+        cin>>a[i];
+    int track=0;
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]!=0)
+        {
+            swap(a[i],a[track]);
+            track++;
+        }
+    }
+    for(int i=0;i<n;i++)
+        cout<<a[i]<<" ";
+    return 0;
+}

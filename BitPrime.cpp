@@ -9,7 +9,7 @@ int main()
     {
 	    string s;cin>>s;
 	    int n=s.length();
-	    if(n==1)
+	    if(n==1) //if len is 1 - no prime
 	    {	
 	    	cout<<"No\n";
 	    	continue;
@@ -23,10 +23,10 @@ int main()
 	    		pos=i+1;
 	    	}
 	    }
-	   	if(cnt==0 || (cnt==1 && pos==n))
+	   	if(cnt==0 || (cnt==1 && pos==n)) //if no 1 or only one 1 at the end - No Prime
 	   		cout<<"No\n";
 	   	else
-	   		cout<<"Yes\n";
+	   		cout<<"Yes\n";//else - Prime
 
 	}
 }

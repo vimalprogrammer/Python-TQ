@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//Idea is to find if the current sum is equal to k , if it is we increment ans.
+//If we are able to find curr - k in our map we add the frequency of (curr- k) to ans, which means we having those many subarrays which sum equal to k.
+
 class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {

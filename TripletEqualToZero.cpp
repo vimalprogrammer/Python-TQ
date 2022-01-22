@@ -50,3 +50,35 @@ int main()
     return 0;
 }
 
+//efficient code
+"""
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& v) {
+	int n=v.size();
+	sort(v.begin(),v.end());
+	int l=0,r=0;
+	vector<vector<int>> v2d;
+	for(int i=0;i<n-2;i++)
+	{
+		l=i+1,r=n-1;
+        if(i > 0 && v[i] == v[i-1])  //remove dublicates for i to optimize the code
+            continue;
+		while(l<r)
+		{
+		    int checkEqO=v[i]+v[l]+v[r];//-1,0,1,2,-1,-4
+			if(checkEqO==0)
+            {
+                v2d.push_back({v[i],v[l++],v[r--]});
+                while(l<r && v[l] == v[l-1]) l++; // Remove dublicates
+                while(l<r && v[r] == v[r+1]) r--; // Remove dublicates
+            }
+			else if((v[i]+v[l]+v[r])>0)
+				r--;
+			else
+				l++;
+         }
+	}
+	return v2d;
+    }
+};"""

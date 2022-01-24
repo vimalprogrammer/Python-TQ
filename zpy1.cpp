@@ -50,3 +50,28 @@ int main()
     copy(start, end, result.begin());
 */
 }
+
+/*
+#include<stdio.h>
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    int a, sum = 0, num = 0;
+    while (cin >> a) 
+    {
+    if (a == 5) 
+    {
+        num = num * 10 + a;
+        while (cin >> a) 
+        {
+            num = num * 10 + a;
+            if (a == 8) break;
+        }
+    }
+    else
+        sum += a;
+    }
+    cout << sum + num;
+    return 0;
+}
+*/

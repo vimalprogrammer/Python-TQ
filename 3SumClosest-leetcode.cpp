@@ -9,7 +9,7 @@ Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 */
 
 
-
+//Three pointer approach
 class Solution {
 public:
     int threeSumClosest(vector<int>& v, int target) {

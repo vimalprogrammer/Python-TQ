@@ -127,3 +127,66 @@ int main()
 	return 0;
 }
 */
+
+
+/*
+#include<bits/stdc++.h>
+using namespace std;
+
+int merge(int arr[],int temp[],int left,int mid,int right)
+{
+    int i,j,k,inv_cnt=0;
+    i=left;
+    j=mid;
+    k=left;
+    while((i<=mid-1) && (j<=right))
+    {
+        if(arr[i]<=arr[j])
+            temp[k++]=arr[i++];
+        else
+        {
+            temp[k++]=arr[j++];
+            inv_cnt+=(mid-i);
+        }
+    }
+    while(i<=mid)
+        temp[k++]=arr[i++];
+    while(j<=right)
+        temp[k++]=arr[j++];
+       
+    for(int i=left;i<=right;i++)
+    {
+        arr[i]=temp[i];
+    }
+    return inv_cnt;
+}
+
+
+int mergeSortSpliting(int arr[],int temp[],int left,int right)
+{
+    int mid,inv_cnt=0;
+    if(right>left)
+    {
+        mid=(right+left)/2;
+        inv_cnt+=mergeSortSpliting(arr,temp,left,mid);
+        inv_cnt+=mergeSortSpliting(arr,temp,mid+1,right);
+        inv_cnt+=merge(arr,temp,left,mid+1,right);
+    }
+    return inv_cnt;
+}
+
+int _mergeSortAppr(int arr[],int n)
+{
+    int temp[n];
+    return mergeSortSpliting(arr,temp,0,n-1);
+}
+
+int main()
+{
+    int a[]={2,4,1,3,5};
+    int n=sizeof(a)/sizeof(a[0]);
+    int res=_mergeSortAppr(a,n);
+    cout<<res;
+    return 0;
+}
+*/

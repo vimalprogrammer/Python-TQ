@@ -23,3 +23,31 @@ public:
     }   
 };
 */
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<int>removeDuplicates(vector<int>& nums) 
+{
+    int i = 0;
+    vector<int>res;
+    for (int n : nums)
+    {
+        if (i < 2 || n > nums[i-2])
+            res.push_back(n);
+        i++;
+    }
+    return res;
+}
+
+int main()
+{
+    //cout<<"Hello World";
+    vector<int>v={1,1,1,2,2,3,3,3,3,3,5,5,5,5};
+    //OUTPUT = {1,1,2,2,3,3,5,5}
+    vector<int>res=removeDuplicates(v);
+    for(auto i:res)
+        cout<<i<<" ";
+    return 0;
+}

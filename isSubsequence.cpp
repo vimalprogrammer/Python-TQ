@@ -33,3 +33,22 @@ bool isSubsequence(string s, string t)
         return false;
 }
 };
+
+
+// clean code
+/*
+bool isSubsequence(string s, string t) 
+{
+        int n1=s.length();
+        int n2=t.length();
+        int j=0;
+        for(int i=0;j<n1 && i<n2;i++)
+        {
+             if(t[i]==s[j])
+                j++;
+        }
+        if(j==n1)
+            return true;
+        return false;
+}
+*/

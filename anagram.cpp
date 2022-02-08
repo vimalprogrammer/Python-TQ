@@ -22,3 +22,25 @@ public:
     return true;
     }
 };
+
+//Using O(n) extra space - efficint than previous code
+
+    bool isAnagram(string s, string t) {
+    int n1=s.length();
+    int n2=t.length();
+    if(n1!=n2)
+        return false;
+    int ar[256]={0};
+    for(int i=0;i<n1;i++)
+    {
+        ar[s[i]]++;
+        ar[t[i]]--;
+    }
+    for(int i=0;i<n1;i++)
+    {
+        if(ar[s[i]]!=0)
+            return false;
+    }
+        return true;
+    }
+    }

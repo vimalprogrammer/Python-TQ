@@ -32,8 +32,8 @@ string frequencySort(string s)
     while(!pqMaxHeap.empty())
     {
         auto x=pqMaxHeap.top().first;//int
-        auto y=pqMaxHeap.top().second;//char
-        st+=string(pqMaxHeap.top().first,pqMaxHeap.top().second);
+        auto y=pqMaxHeap.top().second;//char 
+        st+=string(pqMaxHeap.top().first,pqMaxHeap.top().second);//accept only int and char and not pair
         pqMaxHeap.pop();
     }
     return st;

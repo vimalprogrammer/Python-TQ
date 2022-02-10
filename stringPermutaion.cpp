@@ -42,11 +42,11 @@ int main()
 // Leetcode permutation problem - Return all permutations of a given string
 class Solution {
 private:
-    vector<vector<int>>vec;
+    vector<string>vec;
 public:
-    vector<vector<int>>Permutations(vector<int>v,int i=0)
+    vector<string>Permutations(string v,int i=0)
     {
-        if(i==v.size()-1)
+        if(i==v.length()-1)
             vec.push_back(v);
         else
         {
@@ -59,10 +59,19 @@ public:
         }
         return vec;
     }
-    vector<vector<int>> permute(vector<int>& nums) {
-        int i=0;
-        vector<vector<int>>res=Permutations(nums,i=0);
+    vector<string> permute(string nums,int i=0) {
+        vector<string>res=Permutations(nums,i=0);
         return res;
     }
 };
 
+// Driver Code
+int main()
+{
+        Solution s;
+        string str = "ABC";
+        vector<string>res=s.permute(str, 0);
+        for(auto it:res)
+            cout<<it<<" ";
+        return 0;
+}

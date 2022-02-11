@@ -74,3 +74,27 @@ int main(){
     }
     return 0;
 }  // } Driver Code Ends
+
+
+//ALITER APPROACH
+//-----> Inbuild next_permutation method <----------//
+
+int rank(string S)
+{    
+	string k =S;
+    sort(k.begin() , k.end());
+       
+    unordered_set<char>s;
+    for(char ch:k) s.insert(ch);
+    
+    if(S.size()!=s.size()) return 0;
+      
+    int ans=1;
+    while(k!=S)
+    {
+       next_permutation(k.begin() , k.end());
+       ans++;
+       ans=ans%1000003; 
+    }
+    return ans%1000003;
+}

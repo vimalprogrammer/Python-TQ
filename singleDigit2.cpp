@@ -42,3 +42,23 @@ int main()
     cout<<s.singleNumber(v);
     return 0;
 }
+
+
+// Optimal O(n) solution
+
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) 
+    {       
+        int ones = 0;
+        int twos = 0;
+        
+        for ( int i : nums ) {
+            int a=(~twos);
+            int b=(~ones);
+            ones = (ones ^ i) & (~twos);
+            twos = (twos ^ i) & (~ones);
+        }
+        return ones;
+    }
+};

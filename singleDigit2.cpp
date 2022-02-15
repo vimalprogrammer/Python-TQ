@@ -70,7 +70,6 @@ Time Complexity - O(n)
 Space Complexity - O(1)
 */
 
-
 class Solution {
 public:
     int singleNumber(vector<int>& nums) 
@@ -78,7 +77,8 @@ public:
         int ones = 0;
         int twos = 0;
         
-        for ( int i : nums ) {
+        for ( int i : nums ) 
+        {
             int a=(~twos);
             int b=(~ones);
             ones = (ones ^ i) & (~twos);

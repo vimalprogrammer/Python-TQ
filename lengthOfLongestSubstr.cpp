@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int longestPalindromeWithoutRepeatChar(string s)
+int lengthOfLongestSubStrWithoutRepeatChar(string s)
 {
 	int n=s.length();
 	vector<int>v(256,-1);

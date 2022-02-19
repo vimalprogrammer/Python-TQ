@@ -47,6 +47,6 @@ int main()
     freopen("output.txt", "w", stdout);
     
     string s="adbca";
-    cout<<longestPalindromeWithoutRepeatChar(s);
+    cout<<lengthOfLongestSubStrWithoutRepeatChar(s);
     return 0;
 }

@@ -94,7 +94,7 @@ public:
                 k--;
                 s.pop_back();
             }
-            if(s.size() || c!='0')
+            if(s.size() || c!='0') //if stack is not empty we don't need to care about preceding zeroes
                 s.push_back(c);
         }
         while(s.size() && k--) // if k is greater than 0, we have to pop the stack 

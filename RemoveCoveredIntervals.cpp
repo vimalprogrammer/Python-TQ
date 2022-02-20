@@ -12,6 +12,14 @@ Example 2:
 Input: intervals = [[1,4],[2,3]]
 Output: 1
 */
+
+//Note here
+/*
+
+	    1  2  3  4  5  6  7  8
+		1--------4
+		      3--------6            //see here 3 and 6 covered whole in 2 and 8 below,  
+		  2-----------------8       //therefore it is removed, hope u understand vimal :)
 #include<bits/stdc++.h>
 using namespace std;
 

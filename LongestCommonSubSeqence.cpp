@@ -26,8 +26,8 @@ using namespace std;
 
 class Solution {
 public:
-    int helper(string s1,string s2,int n1,int n2,int memo[][1001])
-    {
+    int helper(string s1,string s2,int n1,int n2,int memo[][1001])//Reason For TLE-We need 
+    {                                                             //to pass strings in parameters as a reference - like &s1,&s2
         if(n1==0 || n2==0)
             return memo[n1][n2]=0;
         if(memo[n1][n2]!=-1)
@@ -49,3 +49,4 @@ public:
         return res;
     }
 };
+

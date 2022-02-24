@@ -1,3 +1,12 @@
+//Explanation:
+// The steps are simple.
+
+// Check if root is NULL. return if yes
+// // Visited hashmap is needed to prevent cycles. Example, consider a undirected rectangle shape graph from A->B->C->D->A. If we dont' keep visited, it will keep on going.
+// If no, clone the node and add the entry pair to hashmap as visited[node] = clonedNode;
+// Iterate over neighbours and do dfs for each. While we are looping over this neighbour list, we can also fill neighbours of cloned node with the result from recursive calls.
+// Return clonedNode at each recursive call
+
 
 // Definition for a Node.
 class Node {

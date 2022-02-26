@@ -1,3 +1,17 @@
+/*
+Explanation:
+Input: vimal
+Output: vimal where v is the greatest alphabet;
+//keep track of rotations and print the final string in the map
+
+Input: arun
+Output: unar where u is the greatest alphabet;
+
+Input: shrivishnu
+Output: vishnushri where v is the greatest alphabet;
+*/
+
+
 #include<bits/stdc++.h>
 using namespace std;
 

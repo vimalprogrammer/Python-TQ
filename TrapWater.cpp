@@ -52,3 +52,38 @@ public:
     return res;
     }
 };
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int sand(vector<int>& height) {
+    vector<int>v=height;
+    int n=v.size();
+    int res=0;
+    int lmax[n],rmax[n];
+    lmax[0]=v[0];
+    for(int i=1;i<n;i++)
+        lmax[i]=max(lmax[i-1],v[i]);
+    rmax[n-1]=v[n-1];
+    for(int i=n-2;i>=0;i--)
+        rmax[i]=max(rmax[i+1],v[i]);
+    for(int i=1;i<n-1;i++)
+        res+=min(lmax[i],rmax[i])-v[i];
+    return res;
+    }
+
+int main()
+{
+    //cout<<"Hello World";
+    int n;cin>>n;
+    vector<int>v;
+    for(int i=0;i<n;i++)
+    {
+        int a;cin>>a;
+        v.push_back(a);
+    }
+    int res=sand(v);
+    cout<<res;
+    return 0;
+}

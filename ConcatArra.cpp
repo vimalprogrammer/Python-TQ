@@ -21,3 +21,18 @@ Explanation: The array ans is formed as follows:
 - ans = [nums[0],nums[1],nums[2],nums[3],nums[0],nums[1],nums[2],nums[3]]
 - ans = [1,3,2,1,1,3,2,1]
 */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> getConcatenation(vector<int>& nums) {
+        int n=nums.size();
+        for(int i=0;i<n;i++)
+        {
+            nums.push_back(nums[i]);
+        }
+        return nums;
+    }
+};
